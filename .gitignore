@@ -55,6 +55,9 @@ coverage.xml
 *.mo
 *.pot
 
+#My staff
+const.py
+
 # Django stuff:
 *.log
 local_settings.py
