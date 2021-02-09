@@ -1,6 +1,7 @@
 from pydub import AudioSegment
 import speech_recognition as sr
 import os
+import requests
 
 @bot.message_handler(content_types=['voice','text'])       #https://qna.habr.com/q/768647
 def repeat_all_message(message):
