@@ -2,12 +2,12 @@ from pydub import AudioSegment
 import speech_recognition as sr
 import os
 
-@bot.message_handler(content_types=['voice','text'])
+@bot.message_handler(content_types=['voice','text'])       #https://qna.habr.com/q/768647
 def repeat_all_message(message):
   file_info = bot.get_file(message.voice.file_id)
   file = requests.get('https://api.telegram.org/file/bot{0}/{1}'.format(token, file_info.file_path))
 
-#sound = AudioSegment.from_mp3("/voice/file.mp3")
+#sound = AudioSegment.from_mp3("/voice/file.mp3")          
 #sound.export("/output/path/file.wav", format="wav")
 
 r = sr.Recognizer()
