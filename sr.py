@@ -2,11 +2,11 @@ import telebot
 import requests
 import speech_recognition as sr
 import os.path
-import pandas
-import subprocess
-import soundfile as sf
+#import pandas
+#import subprocess
+#import soundfile as sf
 
-token = ''
+token = '1566451163:AAGZ7duum1_kPdppyZ3HaXxyPh3zaQpxaT8'
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(content_types=['voice','text'])
@@ -24,7 +24,7 @@ if os.path.exists("voice.ogg")==1:
     print(os.path.exists("voice.ogg"))
     cd = r"C:\Users\admin\PycharmProjects\untitled2"  #ffmpeg-n4.3.1-221-gd08bcbffff-win64-gpl-4.3
     command = "ffmpeg -i voice.ogg voice3.wav"        #https://www.youtube.com/watch?v=qjtmgCb8NcE&t=335s
-    #subprocess.run(cd)
+    #subprocess.run(cd)                               #https://www.youtube.com/watch?v=3oNWzAsfZQg
     #subprocess.run(command)
     os.system(cd)
     os.system(command)
@@ -32,7 +32,7 @@ if os.path.exists("voice.ogg")==1:
 
 
 
-if os.path.exists("2voice.wav")==1:
+while os.path.exists("2voice.wav")==1:
     r = sr.Recognizer()
     harvard = sr.AudioFile('2voice.wav')
     with harvard as source:
